@@ -1,0 +1,38 @@
+@value makerBlack: #202020;
+@value makerWhite: #ffffff;
+
+/* background-color */
+@value makerBg: #ecedef;
+@value makerMenuBg: #f6f6f6;
+@value sliderBg: #ededed;
+
+/* gray */
+@value makerLightGrey: #FAF9F7;
+@value makerGrey: #afafaf;
+@value makerMediumGrey: #999999;
+@value makerDarkGrey: #505050;
+
+/* blue */
+@value makerDarkBlue: #141A40;
+@value makerBlue: #8DCAF6;
+@value makerSideBarBg: #E3ECF1;
+/* @value makerSideBarBg: #11559A; */
+
+/* point */
+@value makerYellow: #FFC21C;
+@value makerPink: #FF20DA;
+@value makerGreen: #19D45E;
+
+/* system */
+@value systemRed: #D32F2F;
+@value systemYellow: #F9A825;
+@value systemGreen: #4CAF50;
+
+/* shadow */
+@value makerShadow: 0px 10px 10px rgba(18,18,18,0.1);
+
+/* transparent */
+@value makerTransparent: 'transparent';
+
+/* 전체 색상 */
+/* @value makerWhite, makerLightGrey, makerGrey, makerMediumGrey, makerDarkGrey, makerBlack, makerDarkBlue, makerBlue, makerSideBarBg, sliderBg, makerYellow, makerPink, makerGreen, makerBg, makerMenuBg, systemRed, systemYellow, systemGreen, makerShadow from 'common/colors.css'; */

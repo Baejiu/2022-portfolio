@@ -1,0 +1,77 @@
+@value sizeScreensSm,sizeScreensMd,sizeScreensLg,padding4,padding8,padding16,padding24,padding32,roundSm,roundMd,roundLg,roundFull from 'common/size.css';
+@value makerWhite, makerLightGrey, makerGrey, makerMediumGrey, makerDarkGrey, makerBlack, makerDarkBlue, makerBlue, makerSideBarBg, sliderBg, makerYellow, makerPink, makerGreen, makerBg, makerMenuBg, systemRed, systemYellow, systemGreen, makerShadow from 'common/colors.css';
+
+.container {
+  position: fixed;
+  bottom: 140px;
+  right: 90px;
+  z-index: 98;
+}
+.dots {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 20px;
+  height: 160px;
+}
+.dotBox {
+  position: relative;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.openDotBox {
+  opacity: 1;
+  animation-name: containerOpen;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid makerDarkGrey;
+  border-radius: 12px;
+  transition: all 0.2s;
+  box-shadow: 0px 4px 8px rgba(18, 18, 18, 0.2);
+}
+.dot.active {
+  border: 2px solid makerBlack !important;
+}
+.dot:hover {
+  cursor: pointer;
+  border: 2px solid makerBlack !important;
+}
+.tag {
+  position: absolute;
+  left: 16px;
+  top: -4px;
+  font-size: 0.75rem;
+  background-color: makerBlack;
+  color: makerWhite;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.2s;
+  box-shadow: makerShadow;
+}
+.tag.active {
+  opacity: 1;
+}
+.dot:hover ~ .tag {
+  opacity: 1;
+}
+@media (max-width: sizeScreensSm) {
+  .container {
+    display: none;
+  }
+}
+
+@keyframes containerOpen {
+  from {
+    opacity: 0;
+    right: -100px;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
