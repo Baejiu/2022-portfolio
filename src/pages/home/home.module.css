@@ -22,8 +22,5 @@
 }
 .section {
   width: 100vw;
-  height: 80vh;
-}
-.section2 {
-  height: 500px;
+  min-height: 500px;
 }

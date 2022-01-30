@@ -91,7 +91,7 @@ const Home = ({ blogService }) => {
           id="main"
           ref={(el) => (sectionRef.current[0] = el)}
         >
-          <Main scrollIndex={scrollIndex} />
+          <Main scrollIndex={scrollIndex} winScroll={winScroll} />
         </section>
         <section
           className={`${styles.section} ${styles.section2}`}

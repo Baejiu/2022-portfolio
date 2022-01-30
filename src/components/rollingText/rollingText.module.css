@@ -1,0 +1,29 @@
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.list {
+  margin: 0;
+  list-style: none;
+  transform-style: preserve-3d;
+  transform: rotateZ(30deg);
+  animation: three-dimensions-circle 30s linear infinite;
+}
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgb(255, 145, 0);
+}
+@keyframes three-dimensions-circle {
+  0% {
+    transform: translateY(-40px) rotateX(-80deg) rotate(0);
+  }
+  50% {
+    transform: translateY(40px) rotateX(-80deg) rotate(180deg);
+  }
+  100% {
+    transform: translateY(-40px) rotateX(-80deg) rotate(360deg);
+  }
+}
