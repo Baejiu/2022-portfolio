@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 10px;
   color: #202020;
-  background-image: url(../public/images/paper-bg.jpg);
+  /* background-image: url(../public/images/paper-bg.jpg); */
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

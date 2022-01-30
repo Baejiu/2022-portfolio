@@ -12,7 +12,7 @@ import Loading from "./pages/loading/loading";
 import Projects from "./pages/projects/projects";
 import Header from "./header/header";
 
-function App({ blogService }) {
+function App({ blogService, projectsService }) {
   const routes = [
     { path: "/", name: "Home", element: Home },
     { path: "/projects", name: "Projects", element: Projects },
@@ -34,7 +34,10 @@ function App({ blogService }) {
           <TransitionGroup component={null}>
             <CSSTransition classNames="fade" timeout={300}>
               <Routes>
-                <Route path="/projects" element={<Projects />} />
+                <Route
+                  path="/projects"
+                  element={<Projects projectsService={projectsService} />}
+                />
                 <Route path="/" element={<Home blogService={blogService} />} />
               </Routes>
             </CSSTransition>
