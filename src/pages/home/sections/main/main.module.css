@@ -1,0 +1,37 @@
+@value sizeScreensSm,sizeScreensMd,sizeScreensLg,padding4,padding8,padding16,padding24,padding32,roundSm,roundMd,roundLg,roundFull from 'common/size.css';
+@value makerWhite, makerLightGrey, makerGrey, makerMediumGrey, makerDarkGrey, makerBlack, makerDarkBlue, makerBlue, makerSideBarBg, sliderBg, makerYellow, makerPink, makerGreen, makerBg, makerMenuBg, systemRed, systemYellow, systemGreen, makerShadow from 'common/colors.css';
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visualBox {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+.textBox {
+  flex-basis: 60%;
+}
+.imgBox {
+  flex-basis: 40%;
+  height: 400px;
+  width: 240px;
+}
+
+@media screen and (max-width: sizeScreensMd) {
+  .visualBox {
+    flex-direction: column;
+  }
+  .textBox,
+  .imgBox {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: sizeScreensSm) {
+}

@@ -3,6 +3,7 @@ import styles from "./home.module.css";
 import Dots from "../../components/homeDots/homeDots";
 import PageProgressBar from "../../components/pageProgressBar/pageProgressBar";
 import Blog from "./sections/blog/blog";
+import Main from "./sections/main/main";
 
 const Home = ({ blogService }) => {
   const sectionsRef = useRef(null);
@@ -90,7 +91,7 @@ const Home = ({ blogService }) => {
           id="main"
           ref={(el) => (sectionRef.current[0] = el)}
         >
-          1
+          <Main scrollIndex={scrollIndex} />
         </section>
         <section
           className={`${styles.section} ${styles.section2}`}
