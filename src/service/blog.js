@@ -3,8 +3,8 @@ export default class BlogService {
     this.http = http;
   }
   async getBlogs() {
-    return this.http.fetch(`/api/blog`, {
-      method: "GET",
-    });
+    // return this.http.fetch(`/api/blog`, {
+    //   method: "GET",
+    // });
   }
 }

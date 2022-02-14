@@ -2,25 +2,13 @@
 @value makerWhite, makerLightGrey, makerGrey, makerMediumGrey, makerDarkGrey, makerBlack, makerDarkBlue, makerBlue, makerSideBarBg, sliderBg, makerYellow, makerPink, makerGreen, makerBg, makerMenuBg, systemRed, systemYellow, systemGreen, makerShadow from 'common/colors.css';
 
 .container {
-  display: flex;
   width: 100%;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  transform: translate(0, 25px);
-  transition: opacity 250ms ease-out, transform 300ms ease;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 180px 10px 10px;
 }
-.openContainer {
-  opacity: 1;
-  transform: translate(0, 0);
-  transition: opacity 250ms ease-out, transform 300ms ease;
+.title {
+  font-size: 6rem;
 }
 .list {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-@media screen and (max-width: sizeScreensMd) {
 }

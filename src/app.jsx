@@ -11,6 +11,7 @@ import Home from "./pages/home/home";
 import Loading from "./pages/loading/loading";
 import Projects from "./pages/projects/projects";
 import Header from "./header/header";
+import ScrollToTop from "./components/scrollToTop/scrollToTop";
 
 function App({ blogService, projectsService }) {
   const routes = [
@@ -26,6 +27,7 @@ function App({ blogService, projectsService }) {
   }, []);
   return (
     <Router>
+      <ScrollToTop />
       {isLoading ? (
         <Loading />
       ) : (
@@ -38,7 +40,15 @@ function App({ blogService, projectsService }) {
                   path="/projects"
                   element={<Projects projectsService={projectsService} />}
                 />
-                <Route path="/" element={<Home blogService={blogService} />} />
+                <Route
+                  path="/"
+                  element={
+                    <Home
+                      blogService={blogService}
+                      projectsService={projectsService}
+                    />
+                  }
+                />
               </Routes>
             </CSSTransition>
           </TransitionGroup>

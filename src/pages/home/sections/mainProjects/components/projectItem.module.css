@@ -1,21 +1,30 @@
 @value sizeScreensSm,sizeScreensMd,sizeScreensLg,padding4,padding8,padding16,padding24,padding32,roundSm,roundMd,roundLg,roundFull from 'common/size.css';
 @value makerWhite, makerLightGrey, makerGrey, makerMediumGrey, makerDarkGrey, makerBlack, makerDarkBlue, makerBlue, makerSideBarBg, sliderBg, makerYellow, makerPink, makerGreen, makerBg, makerMenuBg, systemRed, systemYellow, systemGreen, makerShadow from 'common/colors.css';
 
-.container {
-  position: relative;
-  top: 0;
-  flex-basis: 45%;
-  overflow: hidden;
-  margin: 20px;
-  border-radius: 20px;
-  cursor: pointer;
+.item {
   display: flex;
-  flex-direction: column;
-  box-shadow: 0px 4px 32px rgba(18, 18, 18, 0.1);
-  transition: all 250ms ease-in;
+  flex-direction: row;
+  padding: 40px 0;
+  width: 100%;
+  transition: all ease 250ms;
+  max-width: 600px;
+  max-width: 1200px;
+}
+
+.banner {
+  border: 1px solid makerGrey;
+  border-radius: 20px;
+  flex-basis: 50%;
+  min-height: 320px;
+  width: 600px;
+  overflow: hidden;
+  border-radius: 20px;
 }
 .contents {
-  padding: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .categoryBox {
   display: flex;
@@ -83,19 +92,21 @@
   height: 100%;
   transition: all 100ms ease-in;
 }
-
-.container:hover {
-  top: -10px;
+.itembtns {
+  display: flex;
+}
+.itemBtn {
+  font-size: 1rem;
+  width: 80px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: makerLightGrey;
+  color: makerBlack;
 }
 
-.container:hover .img {
-  transform: scale(1.02);
-}
-.container:hover .title::before {
-  width: 100%;
-}
 @media screen and (max-width: sizeScreensMd) {
-  .container {
-    flex-basis: 100%;
+  .item {
+    flex-direction: column;
   }
 }

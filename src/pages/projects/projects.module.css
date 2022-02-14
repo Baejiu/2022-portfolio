@@ -2,15 +2,12 @@
 @value makerWhite, makerLightGrey, makerGrey, makerMediumGrey, makerDarkGrey, makerBlack, makerDarkBlue, makerBlue, makerSideBarBg, sliderBg, makerYellow, makerPink, makerGreen, makerBg, makerMenuBg, systemRed, systemYellow, systemGreen, makerShadow from 'common/colors.css';
 
 .container {
-  min-height: 110vh;
-  padding-top: 80px;
+  min-height: 2000px;
   display: flex;
+  width: 100%;
   flex-direction: column;
+  padding-top: 70px;
   align-items: center;
-  /* background-image: url(../../../public/images/paper-bg.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed; */
   opacity: 0;
   transform: translate(0, 25px);
   transition: opacity 250ms ease-out, transform 300ms ease;
@@ -19,4 +16,48 @@
   opacity: 1;
   transform: translate(0, 0);
   transition: opacity 250ms ease-out, transform 300ms ease;
+}
+
+.title {
+  text-align: center;
+  font-size: 8vw;
+  padding: 40px 0;
+  height: 200px;
+  width: 100%;
+  color: makerWhite;
+  text-shadow: 0px 0px 3px rgba(20, 20, 20, 0.9);
+}
+.tapList {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  z-index: 100000;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+.tapItem {
+  color: makerDarkGrey;
+  background-color: makerGrey;
+  font-size: 1.2rem;
+  padding: 8px 20px;
+  margin-right: 16px;
+  border-radius: 20px;
+  transition: all 250ms ease-out;
+}
+.tapList li:last-child .tapItem {
+  margin-right: 0;
+}
+.activeTapItem {
+  color: makerWhite;
+  background-color: makerBlack;
+}
+
+.tapItem:hover {
+  color: makerWhite;
+  background-color: makerMediumGrey;
+}
+.box {
+  width: 100%;
+  max-width: 1200px;
 }

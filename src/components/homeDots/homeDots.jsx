@@ -61,7 +61,6 @@ const Dots = ({ scrollIndex, onControlsClick, sections }) => {
     setDotList(list);
   }, [sections]);
 
-  console.log(sections);
   return (
     <div className={styles.container}>
       <div className={styles.dots}>

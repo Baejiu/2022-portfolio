@@ -4,8 +4,9 @@ import Dots from "../../components/homeDots/homeDots";
 import PageProgressBar from "../../components/pageProgressBar/pageProgressBar";
 import Blog from "./sections/blog/blog";
 import Main from "./sections/main/main";
+import MainProjects from "./sections/mainProjects/mainProjects";
 
-const Home = ({ blogService }) => {
+const Home = ({ blogService, projectsService }) => {
   const sectionsRef = useRef(null);
   const sectionRef = useRef([]);
   const [sections, setSections] = useState(null);
@@ -98,7 +99,11 @@ const Home = ({ blogService }) => {
           id="section2"
           ref={(el) => (sectionRef.current[1] = el)}
         >
-          2
+          <MainProjects
+            winScroll={winScroll}
+            scrollIndex={scrollIndex}
+            projectsService={projectsService}
+          />
         </section>
         <section
           className={styles.section}
