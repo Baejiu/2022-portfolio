@@ -3,20 +3,21 @@ import {
   Routes,
   Route,
   useLocation,
-} from "react-router-dom";
-import { useState, useEffect } from "react";
-import "./app.css";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import Home from "./pages/home/home";
-import Loading from "./pages/loading/loading";
-import Projects from "./pages/projects/projects";
-import Header from "./header/header";
-import ScrollToTop from "./components/scrollToTop/scrollToTop";
+} from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import './app.css';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import Home from './pages/home/home';
+import Loading from './pages/loading/loading';
+import Projects from './pages/projects/projects';
+import DetailPages from './pages/projects/detailPages/detailPages';
+import Header from './header/header';
+import ScrollToTop from './components/scrollToTop/scrollToTop';
 
 function App({ blogService, projectsService }) {
   const routes = [
-    { path: "/", name: "Home", element: Home },
-    { path: "/projects", name: "Projects", element: Projects },
+    { path: '/', name: 'Home', element: Home },
+    { path: '/projects', name: 'Projects', element: Projects },
   ];
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -40,6 +41,7 @@ function App({ blogService, projectsService }) {
                   path="/projects"
                   element={<Projects projectsService={projectsService} />}
                 />
+                <Route path="/projects/:id" element={<DetailPages />} />
                 <Route
                   path="/"
                   element={

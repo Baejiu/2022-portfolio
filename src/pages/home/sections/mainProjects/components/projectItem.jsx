@@ -1,10 +1,12 @@
 import React from 'react';
 import { useRef, useEffect, useState } from 'react';
 import styles from './projectItem.module.css';
+import useScrollClipPath from '../../../../../components/useScrollClipPath/useScrollClipPath';
 
 const ProjectItem = ({ winInnerHeight, scrollIndex, item }) => {
   const itemRef = useRef();
 
+  const animatedItem = useScrollClipPath('left', 1, 0);
   const [itemWidth, setItemWidth] = useState(0);
   const [itemTranslate, setItemTranslate] = useState(0);
 
@@ -40,7 +42,7 @@ const ProjectItem = ({ winInnerHeight, scrollIndex, item }) => {
   // }, [scrollIndex]);
   return (
     <li className={styles.item} ref={itemRef}>
-      <div className={styles.banner}>
+      <div className={styles.banner} {...animatedItem}>
         <img
           src={item.bannerUrl}
           alt={`${item.title} 배너이미지`}

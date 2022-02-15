@@ -1,10 +1,11 @@
-import ProjectItem from "./components/projectItem.jsx";
-import React, { useEffect } from "react";
-import { useState } from "react";
-import styles from "./mainProjects.module.css";
+import ProjectItem from './components/projectItem.jsx';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import styles from './mainProjects.module.css';
 
 const MainProjects = ({ scrollIndex, winScroll, projectsService }) => {
   const [winInnerHeight, setWinInnerHeight] = useState(null);
+
   useEffect(() => {
     setWinInnerHeight(window.innerHeight);
   }, [window.innerHeight]);
