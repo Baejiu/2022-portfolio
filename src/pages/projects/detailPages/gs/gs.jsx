@@ -76,13 +76,13 @@ const GsPage = (props) => {
         </section>
         <section className={styles.section}>
           <p className={styles.description}>
-            여러분. 리액트로 갑시다. 2020년 하반기 드림코딩 엘리를 수강하고
-            리액트의 매력에 빠져있던 상태였습니다. 신규 프로그램을 구현하기 위해
-            언어를 선택해야했습니다. 저는 리액트를 도입할 것을 강력하게
-            추천했습니다. 이유는 명확합니다. 기존 프로그램은 하드코딩되어있었고
-            재사용성이 떨어졌습니다. 또한 유지보수가 용이하지 않았고, 하나의
-            페이지에 많은 veiw와 data에 관련된 함수들, 정보들이 나열되어
-            있었습니다.
+            <b>"여러분. 리액트로 갑시다."</b>
+            <br /> 2020년 하반기 드림코딩 엘리를 수강하고 리액트의 매력에
+            빠져있던 상태였습니다. 신규 프로그램을 구현하기 위해 언어를
+            선택해야했습니다. 저는 리액트를 도입할 것을 강력하게 추천했습니다.
+            이유는 명확합니다. 기존 프로그램은 하드코딩되어있었고 재사용성이
+            떨어졌습니다. 또한 유지보수가 용이하지 않았고, 하나의 페이지에 많은
+            veiw와 data에 관련된 함수들, 정보들이 저장되어 있었습니다.
           </p>
           <p className={styles.description}>
             react의 컴포넌트 단위의 구조와 재사용성, 상태관리의 용이성을
@@ -104,7 +104,9 @@ const GsPage = (props) => {
             <li className={styles.listItem}>
               폴더 구축, router, redux 구축 기여
             </li>
-            <li className={styles.listItem}>레이아웃, 사이드바 구현</li>
+            <li className={styles.listItem}>
+              레이아웃, 사이드바, 메뉴 등 공통적인 영역 구현
+            </li>
 
             <li className={styles.listItem}>
               login, main, 각각 page front-end 구현
@@ -127,6 +129,13 @@ const GsPage = (props) => {
           <p className={styles.description}>
             후반부 db설계와 spl문, api 구현을 해볼 수 있는 기회가 있었습니다.
             매뉴얼, 공지사항, 1:1문의, 도장관리(이미지업로드 등)을 진행했습니다.
+            각 테이블간의 관계와 연결성, 테이블 데이터를 어떻게 효율적으로
+            저장하고 관리할 수 있을지 고민해볼 수 있던 것이 좋았습니다. 또한
+            프론트엔드 작업 뿐만 아니라 페이지 데이터의 전체적인 흐름을 파악할
+            수 있는 시간이었습니다. 30개가 넘는 페이지수와 회계, 급여,
+            관리자페이지, 회원정보, 제가 구현한 간단한 매뉴얼 게시판까지 각
+            페이지가 각자의 기능을 가지고 있는 웹프로그램을 구현해볼 수
+            있었습니다.
           </p>
         </section>
         <section className={styles.section}>

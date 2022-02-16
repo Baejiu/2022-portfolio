@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import styles from "./upDownText.module.css";
+import React, { useEffect, useRef, useState } from 'react';
+import styles from './upDownText.module.css';
 
 const UpDownText = ({ list, scrollIndex }) => {
   const [open, setOpen] = useState(null);
@@ -31,7 +31,7 @@ const UpDownText = ({ list, scrollIndex }) => {
       setOpen(false);
       setTimeout(() => {
         let updated = activeIndex;
-        if (3 == updated || updated == null) {
+        if (3 === updated || updated == null) {
           updated = 0;
         } else {
           updated++;
@@ -48,7 +48,7 @@ const UpDownText = ({ list, scrollIndex }) => {
     if (!list) {
       return;
     }
-    if (scrollIndex == 0) {
+    if (scrollIndex === 0) {
       setOpen(true);
       setActiveIndex(0);
       setActiveText(list[0]);
@@ -56,7 +56,7 @@ const UpDownText = ({ list, scrollIndex }) => {
     } else if (scrollIndex > 0) {
       setIsRunning(false);
     }
-  }, [scrollIndex]);
+  }, []);
 
   return (
     <ul className={open ? `${styles.open} ${styles.list}` : styles.list}>
