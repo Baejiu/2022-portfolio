@@ -1,10 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
-import styles from "./home.module.css";
-import Dots from "../../components/homeDots/homeDots";
-import PageProgressBar from "../../components/pageProgressBar/pageProgressBar";
-import Blog from "./sections/blog/blog";
-import Main from "./sections/main/main";
-import MainProjects from "./sections/mainProjects/mainProjects";
+import React, { useRef, useState, useEffect } from 'react';
+import styles from './home.module.css';
+import Dots from '../../components/homeDots/homeDots';
+import PageProgressBar from '../../components/pageProgressBar/pageProgressBar';
+import Blog from './sections/blog/blog';
+import Main from './sections/main/main';
+import MainProjects from './sections/mainProjects/mainProjects';
 
 const Home = ({ blogService, projectsService }) => {
   const sectionsRef = useRef(null);
@@ -46,9 +46,9 @@ const Home = ({ blogService, projectsService }) => {
 
   useEffect(() => {
     if (!sectionsRef.current) return;
-    window.addEventListener("scroll", yScrollEvent);
+    window.addEventListener('scroll', yScrollEvent);
     return () => {
-      window.removeEventListener("scroll", yScrollEvent);
+      window.removeEventListener('scroll', yScrollEvent);
     };
   }, [sectionsRef.current]);
 
@@ -66,7 +66,7 @@ const Home = ({ blogService, projectsService }) => {
   };
 
   const onControlsClick = (e) => {
-    sectionRef.current[e.target.id].scrollIntoView({ behavior: "smooth" });
+    sectionRef.current[e.target.id].scrollIntoView({ behavior: 'smooth' });
   };
   return (
     <>
@@ -110,14 +110,14 @@ const Home = ({ blogService, projectsService }) => {
           id="section3"
           ref={(el) => (sectionRef.current[2] = el)}
         >
-          3
+          <Blog blogService={blogService} />
         </section>
         <section
           className={`${styles.section} ${styles.section2}`}
           id="section4"
           ref={(el) => (sectionRef.current[3] = el)}
         >
-          <Blog blogService={blogService} />
+          3
         </section>
         <section
           className={styles.section}

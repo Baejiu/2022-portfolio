@@ -2,26 +2,36 @@
 @value makerWhite, makerLightGrey, makerGrey, makerMediumGrey, makerDarkGrey, makerBlack, makerDarkBlue, makerBlue, makerSideBarBg, sliderBg, makerYellow, makerPink, makerGreen, makerBg, makerMenuBg, systemRed, systemYellow, systemGreen, makerShadow from 'common/colors.css';
 
 .container {
-  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  /* background-image: url(../../../public/images/paper-bg.jpg);
+  align-items: center;
+  background-color: makerLightGrey;
+}
+.list {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.img {
+  display: inline-block;
+  width: 240px;
+  height: 240px;
   background-position: center;
-  background-size: cover;
-  background-attachment: fixed; */
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  transition: background 150ms ease-in, opacity 300ms ease-in;
   opacity: 0;
-  transform: translate(0, 25px);
-  transition: opacity 250ms ease-out, transform 300ms ease;
-}
-.openContainer {
-  opacity: 1;
-  transform: translate(0, 0);
-  transition: opacity 250ms ease-out, transform 300ms ease;
-}
-.section {
-  width: 100vw;
-  min-height: 500px;
   outline: 1px solid red;
+}
+
+.container:hover .img {
+  opacity: 0.8;
 }
