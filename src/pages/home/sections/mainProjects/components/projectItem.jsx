@@ -2,18 +2,17 @@ import React from 'react';
 import { useRef, useEffect, useState } from 'react';
 import styles from './projectItem.module.css';
 import useScrollClipPath from '../../../../../components/useScrollClipPath/useScrollClipPath';
+import { Link } from 'react-router-dom';
 
-const ProjectItem = ({ winInnerHeight, scrollIndex, item }) => {
+const ProjectItem = ({ winInnerHeight, scrollIndex, item, flex }) => {
   const itemRef = useRef();
 
-  const animatedItem = useScrollClipPath('left', 1, 0);
   const [itemWidth, setItemWidth] = useState(0);
   const [itemTranslate, setItemTranslate] = useState(0);
 
   const yScrollEvent = () => {
     const top = itemRef.current.getBoundingClientRect().top;
     const num = ((winInnerHeight - top) / winInnerHeight) * 2;
-    console.log(num, winInnerHeight - top);
     if (0 < num < 1) {
       setItemWidth(num);
       setItemTranslate(winInnerHeight - top);
@@ -29,7 +28,6 @@ const ProjectItem = ({ winInnerHeight, scrollIndex, item }) => {
       window.removeEventListener('scroll', yScrollEvent);
     };
   }, []);
-  console.log(winInnerHeight);
   // useEffect(() => {
   //   if (!itemRef.current) {
   //     return;
@@ -41,44 +39,54 @@ const ProjectItem = ({ winInnerHeight, scrollIndex, item }) => {
   //   }
   // }, [scrollIndex]);
   return (
-    <li className={styles.item} ref={itemRef}>
-      <div className={styles.banner} {...animatedItem}>
-        <img
-          src={item.bannerUrl}
-          alt={`${item.title} 배너이미지`}
-          className={styles.img}
-        />
-      </div>
-      <div className={styles.contents}>
-        <div className={styles.textBox}>
-          <div className={styles.categoryBox}>
-            <span className={styles.icon}>🖥</span>
-            <span className={styles.category}>{item.category}</span>
+    <li ref={itemRef} className={styles.container}>
+      <Link to={item.url}>
+        <div
+          className={
+            flex === 'row'
+              ? `${styles.item} ${styles.row}`
+              : `${styles.item} ${styles.rowReverse}`
+          }
+          style={{ flexDirection: `${flex && flex}` }}
+        >
+          <div className={styles.banner} {...useScrollClipPath('down', 1, 0)}>
+            <img
+              src={item.bannerUrl}
+              alt={`${item.title} 배너이미지`}
+              className={styles.img}
+            />
           </div>
-          <h3 className={styles.title}>{item.title}</h3>
-          <p className={styles.subtitle}>{item.subtitle}</p>
-          <ul className={styles.tags}>
-            {item.tag.map((item, index) => {
-              return (
-                <li key={index} className={styles.tag}>
-                  #{item}
-                </li>
-              );
-            })}
-          </ul>
+          <div className={styles.contents} {...useScrollClipPath('down', 1, 0)}>
+            <div className={styles.textBox}>
+              <h3 className={styles.title}>{item.title}</h3>
+              <p className={styles.subtitle}>{item.subtitle}</p>
+              <ul className={styles.tags}>
+                {item.tag.map((item, index) => {
+                  return (
+                    <li key={index} className={styles.tag}>
+                      #{item}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            {/* <ul className={styles.itembtns}>
+            <li className={styles.itemBtn}>
+              <button>git</button>
+            </li>
+            <li className={styles.itemBtn}>
+              <button>detail page</button>
+            </li>
+            <li className={styles.itemBtn}>
+              <button>home Page</button>
+            </li>
+          </ul> */}
+            <div>
+              <button className={styles.link}>go</button>
+            </div>
+          </div>
         </div>
-        <ul className={styles.itembtns}>
-          <li className={styles.itemBtn}>
-            <button>git</button>
-          </li>
-          <li className={styles.itemBtn}>
-            <button>detail page</button>
-          </li>
-          <li className={styles.itemBtn}>
-            <button>home Page</button>
-          </li>
-        </ul>
-      </div>
+      </Link>
     </li>
   );
 };

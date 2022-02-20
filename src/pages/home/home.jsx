@@ -3,7 +3,10 @@ import styles from './home.module.css';
 import Dots from '../../components/homeDots/homeDots';
 import PageProgressBar from '../../components/pageProgressBar/pageProgressBar';
 import Blog from './sections/blog/blog';
+import About from './sections/about/about';
 import Main from './sections/main/main';
+import Last from './sections/last/last';
+import Contact from './sections/contact/contact';
 import MainProjects from './sections/mainProjects/mainProjects';
 
 const Home = ({ blogService, projectsService }) => {
@@ -24,7 +27,7 @@ const Home = ({ blogService, projectsService }) => {
       const nodes = sectionsRef.current.childNodes;
       let list = [];
       nodes.forEach((item, index) => {
-        if (list.length == 0) {
+        if (list.length === 0) {
           list.push(0);
         } else {
           let innerheight = Math.floor(
@@ -38,9 +41,7 @@ const Home = ({ blogService, projectsService }) => {
     return () => {
       setContainerHeight(null);
       setSections(null);
-      setTimeout(() => {
-        console.log(`hi`);
-      }, 1000);
+      setTimeout(() => {}, 1000);
     };
   }, []);
 
@@ -56,7 +57,7 @@ const Home = ({ blogService, projectsService }) => {
     const scrolled = window.scrollY;
     setWinScroll(scrolled);
     sectionsHeight.forEach((item, index) => {
-      if (scrolled + window.innerHeight == containerHeight) {
+      if (scrolled + window.innerHeight === containerHeight) {
         setScrollIndex(sectionsHeight.length - 1);
       }
       if (scrolled >= item) {
@@ -96,8 +97,15 @@ const Home = ({ blogService, projectsService }) => {
         </section>
         <section
           className={`${styles.section} ${styles.section2}`}
-          id="section2"
+          id="about"
           ref={(el) => (sectionRef.current[1] = el)}
+        >
+          <About />
+        </section>
+        <section
+          className={styles.section}
+          id="projects"
+          ref={(el) => (sectionRef.current[2] = el)}
         >
           <MainProjects
             winScroll={winScroll}
@@ -106,32 +114,25 @@ const Home = ({ blogService, projectsService }) => {
           />
         </section>
         <section
-          className={styles.section}
-          id="section3"
-          ref={(el) => (sectionRef.current[2] = el)}
+          className={`${styles.section} ${styles.section2}`}
+          id="blog"
+          ref={(el) => (sectionRef.current[3] = el)}
         >
           <Blog blogService={blogService} />
         </section>
         <section
-          className={`${styles.section} ${styles.section2}`}
-          id="section4"
-          ref={(el) => (sectionRef.current[3] = el)}
-        >
-          3
-        </section>
-        <section
           className={styles.section}
-          id="section5"
+          id="dream"
           ref={(el) => (sectionRef.current[4] = el)}
         >
-          5
+          <Last />
         </section>
         <section
           className={styles.section}
-          id="section6"
+          id="contact"
           ref={(el) => (sectionRef.current[5] = el)}
         >
-          6
+          <Contact />
         </section>
       </div>
     </>

@@ -20,13 +20,29 @@
 }
 
 .textBox {
-  flex-basis: 70%;
+  flex-basis: 60%;
   width: 100%;
 }
 .imgBox {
-  height: 60vh;
-  flex-basis: 30%;
-  border: 4px solid makerGrey;
+  position: relative;
+  height: 90vh;
+  flex-basis: 40%;
+  background-image: url(../../../../../public/images/mainImg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.imgBox:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../../../public/images/mainImg-top.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 .rollingText {
   margin-top: 60px;

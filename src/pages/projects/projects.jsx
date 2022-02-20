@@ -8,11 +8,9 @@ const Projects = ({ projectsService }) => {
   const [tapTitles, setTapTitles] = useState(null); //tap
   const [activeTap, setActiveTap] = useState(null);
   useEffect(() => {
-    console.log('컴포넌트 시작');
     setInpage(true);
     return () => {
       setInpage(false);
-      console.log('컴포넌트 종료 ');
     };
   }, []);
 

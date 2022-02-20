@@ -1,22 +1,21 @@
 @value sizeScreensSm,sizeScreensMd,sizeScreensLg,padding4,padding8,padding16,padding24,padding32,roundSm,roundMd,roundLg,roundFull from 'common/size.css';
 @value makerWhite, makerLightGrey, makerGrey, makerMediumGrey, makerDarkGrey, makerBlack, makerDarkBlue, makerBlue, makerSideBarBg, sliderBg, makerYellow, makerPink, makerGreen, makerBg, makerMenuBg, systemRed, systemYellow, systemGreen, makerShadow from 'common/colors.css';
 
-.container {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translate(0, 25px);
-  transition: opacity 250ms ease-out, transform 300ms ease;
+.titleBox {
+  width: 100%;
+  padding: 20px;
 }
-.openContainer {
-  opacity: 1;
-  transform: translate(0, 0);
-  transition: opacity 250ms ease-out, transform 300ms ease;
+.title {
+  font-size: 8rem;
+  display: block;
+  line-height: 5.5rem;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
-.section {
-  width: 100vw;
-  min-height: 500px;
+
+.titleBox.black .title {
+  color: rgb(18, 18, 18);
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
 }

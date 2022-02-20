@@ -3,13 +3,6 @@
 
 .container {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 180px 10px 10px;
-}
-.title {
-  font-size: 6rem;
-}
-.list {
-
+  padding: 180px 0 180px;
 }

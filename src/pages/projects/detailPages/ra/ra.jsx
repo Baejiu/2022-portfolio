@@ -5,11 +5,9 @@ import useScrollFadeIn from '../../../../components/useScrollFadeIn/useScrollFad
 const RaPage = (props) => {
   const [inPage, setInPage] = useState(false);
   useEffect(() => {
-    console.log('컴포넌트 시작');
     setInPage(true);
     return () => {
       setInPage(false);
-      console.log('컴포넌트 종료 ');
     };
   }, []);
 

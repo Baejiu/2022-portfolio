@@ -1,5 +1,5 @@
 .container {
-  height: 100%;
+  height: 40%;
   display: flex;
   justify-content: center;
 }
@@ -18,12 +18,12 @@
 }
 @keyframes three-dimensions-circle {
   0% {
-    transform: translateY(-40px) rotateX(-80deg) rotate(0);
+    transform: translateY(0px) rotateX(-100deg) rotate(0);
   }
   50% {
-    transform: translateY(40px) rotateX(-80deg) rotate(180deg);
+    transform: translateY(0px) rotateX(-100deg) rotate(180deg);
   }
   100% {
-    transform: translateY(-40px) rotateX(-80deg) rotate(360deg);
+    transform: translateY(0px) rotateX(-100deg) rotate(360deg);
   }
 }

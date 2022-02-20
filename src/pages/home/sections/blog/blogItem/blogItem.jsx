@@ -3,6 +3,7 @@ import styles from './blogItem.module.css';
 import useScrollClipPath from 'components/useScrollClipPath/useScrollClipPath';
 import { useRef } from 'react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const BlogItem = ({ item }) => {
   const itemRef = useRef();
@@ -17,7 +18,6 @@ const BlogItem = ({ item }) => {
     // }
     // const x = itemRef.current.getBoundingClientRect().x;
     // const y = itemRef.current.getBoundingClientRect().y;
-    // console.log(`url(../../../../../../public${item.bannerUrl})`);
     // // imgRef.style.transform = `translate(${x - 100}px, ${y - 100}px)`;
     // setMousePosition({ x: event.clientX - x, y: event.clientY - y });
   };
@@ -33,25 +33,17 @@ const BlogItem = ({ item }) => {
   //   });
   // }, []);
   return (
-    <li
-      className={styles.container}
-      ref={itemRef}
-      onMouseMove={showBlogImg}
-      data-url={item.bannerUrl}
-    >
-      <h4 {...useScrollClipPath('left', 1, 0)} className={styles.title}>
-        {item.title}
-      </h4>
-      {/* <span
-        className={styles.img}
-        ref={imgRef}
-        style={{
-          transform: `translate(${MousePosition.x - 100}px, ${
-            MousePosition.y - 100
-          }px)`,
-          backgroundImage: `url(../../../../../../public${item.bannerUrl})`,
-        }}
-      ></span> */}
+    <li ref={itemRef} onMouseMove={showBlogImg} data-url={item.bannerUrl}>
+      <a
+        href={item.url}
+        {...useScrollClipPath('left', 1, 0)}
+        target="_blank"
+        rel="noreferrer"
+        className={styles.container}
+      >
+        <h4 className={styles.title}>{item.title}</h4>
+        <span className={styles.date}>{item.date}</span>
+      </a>
     </li>
   );
 };

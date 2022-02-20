@@ -2,9 +2,12 @@
 @value makerWhite, makerLightGrey, makerGrey, makerMediumGrey, makerDarkGrey, makerBlack, makerDarkBlue, makerBlue, makerSideBarBg, sliderBg, makerYellow, makerPink, makerGreen, makerBg, makerMenuBg, systemRed, systemYellow, systemGreen, makerShadow from 'common/colors.css';
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
   border-top: 1px solid makerBlack;
-  padding: 40px 20px;
+  padding: 24px 20px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 300ms ease-in-out;
@@ -12,10 +15,14 @@
   background-color: rgba(255, 255, 255, 0);
 }
 .title {
+  display: inline-block;
   font-weight: normal;
   position: relative;
   z-index: 1;
   color: makerDarkGrey;
+  margin-bottom: 20px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .container:hover .title {
   font-weight: bold;
@@ -28,10 +35,6 @@
 .container:hover .img {
   opacity: 1;
 }
-.container:last-child {
-  border-bottom: 1px solid makerBlack;
-}
-
 .img {
   display: inline-block;
   width: 200px;
@@ -43,6 +46,10 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   outline: 1px solid red;
+}
+.date {
+  font-size: 1rem;
+  color: makerMediumGrey;
 }
 @keyframes hue {
   from {

@@ -1,8 +1,8 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-import ProjectItem from "../projectItem/projectItem";
-import styles from "./projectList.module.css";
+import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import ProjectItem from '../projectItem/projectItem';
+import styles from './projectList.module.css';
 
 const ProjectList = ({ data, activeTap }) => {
   const [projects, setProjects] = useState(null);
@@ -14,11 +14,10 @@ const ProjectList = ({ data, activeTap }) => {
     setLoading(true);
     setTimeout(() => {
       setProjects(() => {
-        if (activeTap == "all") {
+        if (activeTap == 'all') {
           return data;
         }
         const filter = data.filter((item) => item.category.includes(activeTap));
-        console.log(filter);
         return filter;
       });
 

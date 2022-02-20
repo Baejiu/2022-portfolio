@@ -3,12 +3,10 @@ export default class HttpClient {
     this.baseURL = baseURL;
   }
   async fetch(url, options) {
-    console.log(url);
-    console.log(options);
     const res = await fetch(`${this.baseURL}${url}`, {
       ...options,
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
         ...options.headers,
       },
     });
@@ -20,7 +18,7 @@ export default class HttpClient {
     }
     if (res.status > 299 || res.status < 200) {
       const message =
-        data && data.message ? data.message : "Someting went wrong!";
+        data && data.message ? data.message : 'Someting went wrong!';
       throw new Error(message);
     }
     return data;

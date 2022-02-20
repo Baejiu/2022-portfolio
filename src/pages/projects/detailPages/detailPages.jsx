@@ -18,9 +18,7 @@ const DetailPages = () => {
     );
     return () => {
       setContainerHeight(null);
-      setTimeout(() => {
-        console.log(`hi`);
-      }, 1000);
+      setTimeout(() => {}, 1000);
     };
   }, []);
   useEffect(() => {
@@ -35,7 +33,6 @@ const DetailPages = () => {
     setWinScroll(scrolled);
   };
 
-  console.log(id);
   return (
     <>
       <PageProgressBar

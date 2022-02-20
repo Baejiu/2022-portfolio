@@ -23,7 +23,7 @@ const useScrollClipPath = (direction = 'left', duration = 1, delay = 0) => {
       const { current } = element;
       if (entry.isIntersecting) {
         current.style.transitionProperty = 'transform, clip-path';
-        current.style.transitionDuration = `${duration * 1.5}s, ${duration}s`;
+        current.style.transitionDuration = `${duration}s, ${duration}s`;
         current.style.transitionTimingFunction = 'cubic-bezier(0, 0, 0.2, 1)';
         current.style.transitionDelay = `${delay}s`;
         current.style.transform = 'scale(1)';
@@ -37,7 +37,7 @@ const useScrollClipPath = (direction = 'left', duration = 1, delay = 0) => {
     let observer;
 
     if (element.current) {
-      observer = new IntersectionObserver(onScroll, { threshold: 0.7 });
+      observer = new IntersectionObserver(onScroll, { threshold: 0.3 });
       observer.observe(element.current.parentNode);
     }
 
