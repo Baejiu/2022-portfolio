@@ -48,3 +48,9 @@
   width: 100%;
   height: 100%;
 }
+
+@media screen and (max-width: sizeScreensMd) {
+  .container {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}

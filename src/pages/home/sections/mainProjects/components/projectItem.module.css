@@ -10,6 +10,12 @@
   cursor: pointer;
 }
 
+.item.rowReverse {
+  flex-direction: row-reverse;
+}
+.item.row {
+  flex-direction: row;
+}
 .item:hover .img {
   transform: scale(1.05);
 }
@@ -97,7 +103,29 @@
   transition: all 250ms ease-in;
 }
 @media screen and (max-width: sizeScreensMd) {
-  .item {
+  .container {
+    padding: 20px 0;
+  }
+  .item.rowReverse,
+  .item.row {
     flex-direction: column;
+  }
+  .rowReverse {
+    text-align: start;
+  }
+  .rowReverse .tags {
+    justify-content: flex-start;
+  }
+  .title {
+    font-size: 1.6rem;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .link {
+    font-size: 1.6rem;
+    margin-top: 20px;
   }
 }

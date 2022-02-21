@@ -44,3 +44,19 @@
 .textBold {
   font-weight: bold;
 }
+
+@media screen and (max-width: sizeScreensMd) {
+  .container {
+    padding: 40px 0;
+  }
+  .contents {
+    flex-direction: column;
+  }
+  .content {
+    flex-basis: 50%;
+    padding-top: 40px;
+  }
+  .description {
+    width: 100%;
+  }
+}

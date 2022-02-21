@@ -33,11 +33,7 @@ const BlogItem = ({ item }) => {
   //   });
   // }, []);
   return (
-    <li
-      ref={itemRef}
-      onMouseMove={showBlogImg}
-      data-url={`/images/blog/${item.id}.png`}
-    >
+    <li ref={itemRef} onMouseMove={showBlogImg} data-url={item.img}>
       <a
         href={item.url}
         {...useScrollClipPath('left', 1, 0)}

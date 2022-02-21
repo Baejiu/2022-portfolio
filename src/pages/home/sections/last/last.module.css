@@ -27,3 +27,12 @@
 .textBold {
   font-weight: bold;
 }
+
+@media screen and (max-width: sizeScreensMd) {
+  .container {
+    padding: 40px 0;
+  }
+  .description {
+    font-size: 0.875rem;
+  }
+}

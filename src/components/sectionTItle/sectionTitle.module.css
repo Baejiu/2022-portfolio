@@ -19,3 +19,10 @@
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
     1px 1px 0 #fff;
 }
+
+@media screen and (max-width: sizeScreensMd) {
+  .title {
+    font-size: 18vw;
+    line-height: 12vw;
+  }
+}

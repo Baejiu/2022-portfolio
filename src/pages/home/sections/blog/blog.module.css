@@ -44,3 +44,9 @@
 .contents:hover .img {
   opacity: 0.8;
 }
+
+@media screen and (max-width: sizeScreensMd) {
+  .container {
+    padding: 40px 0;
+  }
+}

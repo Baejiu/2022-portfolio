@@ -47,7 +47,6 @@ const ProjectItem = ({ winInnerHeight, scrollIndex, item, flex }) => {
               ? `${styles.item} ${styles.row}`
               : `${styles.item} ${styles.rowReverse}`
           }
-          style={{ flexDirection: `${flex && flex}` }}
         >
           <div className={styles.banner} {...useScrollClipPath('down', 1, 0)}>
             <img
