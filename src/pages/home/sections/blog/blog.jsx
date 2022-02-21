@@ -35,7 +35,8 @@ const Blog = ({ blogService }) => {
 
   useEffect(() => {
     setBlogs(blogService.data);
-  }, []);
+    console.log(blogService.data);
+  }, [blogService.data]);
 
   useEffect(() => {
     if (!img) {

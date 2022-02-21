@@ -22,6 +22,8 @@ function App({ blogService, projectsService }) {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
+    blogService.getApiPosts();
+
     setTimeout(() => {
       setIsLoading(false);
     }, 2400);
