@@ -73,28 +73,78 @@ const GsPage = (props) => {
           </ul>
         </section>
         <section className={styles.section}>
-          <p className={styles.description}>
-            <b>"여러분. 리액트로 갑시다."</b>
-            <br /> 2020년 하반기 드림코딩 엘리를 수강하고 리액트의 매력에
-            빠져있던 상태였습니다. 신규 프로그램을 구현하기 위해 언어를
-            선택해야했습니다. 저는 리액트를 도입할 것을 강력하게 추천했습니다.
-            이유는 명확합니다. 기존 프로그램은 하드코딩되어있었고 재사용성이
-            떨어졌습니다. 또한 유지보수가 용이하지 않았고, 하나의 페이지에 많은
-            veiw와 data에 관련된 함수들, 정보들이 저장되어 있었습니다.
-          </p>
-          <p className={styles.description}>
-            react의 컴포넌트 단위의 구조와 재사용성, 상태관리의 용이성을
-            강조하였고, 데이터는 서버에서 관리하고 view역할에 충실하게 작성할 수
-            있음을 강조했습니다. 또한 엄청나게 큰 생태계로 이미 많은
-            라이브러리들이 존재하고, Virtual DOM으로 변화가 필요한 곳만
-            렌더링되어 웹프로그램에 더욱 알맞다고 생각했습니다.
-          </p>
-          <p className={styles.description}>
-            첫 react-app생성, 폴더 구축, 로그인부터 프로그램의 베타까지 함께
-            진행했습니다. 팀원 모두 프로젝트를 협업으로 진행해본 것이 처음이기
-            때문에 소통에 어려움이 있었지만, 각자의 맡은 역할에 충실할 수 있도록
-            배려하며 프로젝트가 진행되었습니다.
-          </p>
+          <div className={styles.contents}>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/gs/gs_01.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <p className={`${styles.description} ${styles.flex50}`}>
+              <b>"여러분. 리액트로 갑시다."</b>
+              <br /> 2020년 하반기 드림코딩 엘리를 수강하고 리액트의 매력에
+              빠져있던 상태였습니다. 신규 프로그램을 구현하기 위해 언어를
+              선택해야했습니다. 저는 리액트를 도입할 것을 강력하게 추천했습니다.
+              이유는 명확합니다. 기존 프로그램은 하드코딩되어있었고 재사용성이
+              떨어졌습니다. 또한 유지보수가 용이하지 않았고, 하나의 페이지에
+              많은 veiw와 data에 관련된 함수들, 정보들이 저장되어 있었습니다.
+            </p>
+          </div>
+        </section>
+        <section className={styles.section}>
+          <div className={styles.contents}>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/gs/gs_02.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/gs/gs_03.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+          </div>
+        </section>
+        <section className={styles.section}>
+          <div className={styles.contents}>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/gs/gs_06.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <p className={`${styles.description} ${styles.flex50}`}>
+              react의 컴포넌트 단위의 구조와 재사용성, 상태관리의 용이성을
+              강조하였고, 데이터는 서버에서 관리하고 view역할에 충실하게 작성할
+              수 있음을 강조했습니다. 또한 엄청나게 큰 생태계로 이미 많은
+              라이브러리들이 존재하고, Virtual DOM으로 변화가 필요한 곳만
+              렌더링되어 웹프로그램에 더욱 알맞다고 생각했습니다.
+            </p>
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <div className={styles.contents}>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/gs/gs_05.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <p className={`${styles.description} ${styles.flex50}`}>
+              첫 react-app생성, 폴더 구축, 로그인부터 프로그램의 베타까지 함께
+              진행했습니다. 팀원 모두 프로젝트를 협업으로 진행해본 것이 처음이기
+              때문에 소통에 어려움이 있었지만, 각자의 맡은 역할에 충실할 수
+              있도록 배려하며 프로젝트가 진행되었습니다.
+            </p>
+          </div>
         </section>
         <section className={styles.section}>
           <ul className={styles.list}>
@@ -124,6 +174,24 @@ const GsPage = (props) => {
           </ul>
         </section>
         <section className={styles.section}>
+          <div className={styles.contents}>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/gs/gs_04.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/gs/gs_07.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+          </div>
+        </section>
+        <section className={styles.section}>
           <p className={styles.description}>
             후반부 db설계와 spl문, api 구현을 해볼 수 있는 기회가 있었습니다.
             매뉴얼, 공지사항, 1:1문의, 도장관리(이미지업로드 등)을 진행했습니다.
@@ -135,9 +203,6 @@ const GsPage = (props) => {
             페이지가 각자의 기능을 가지고 있는 웹프로그램을 구현해볼 수
             있었습니다.
           </p>
-        </section>
-        <section className={styles.section}>
-          <p>next project </p>
         </section>
       </div>
     </>

@@ -39,7 +39,10 @@ function App({ blogService, projectsService }) {
                   path="/projects"
                   element={<Projects projectsService={projectsService} />}
                 />
-                <Route path="/projects/:id" element={<DetailPages />} />
+                <Route
+                  path="/projects/:id"
+                  element={<DetailPages projectsService={projectsService} />}
+                />
                 <Route
                   path="/"
                   element={

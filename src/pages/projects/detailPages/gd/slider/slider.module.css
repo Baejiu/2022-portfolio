@@ -1,0 +1,103 @@
+@value makerWhite, makerLightGrey, makerGrey, makerMediumGrey, makerDarkGrey, makerBlack, makerDarkBlue, makerBlue, makerSideBarBg, makerYellow, makerPink, makerGreen, makerBg, makerMenuBg, sliderBg, systemRed, systemYellow, systemGreen, makerShadow from 'common/colors.css';
+
+.slick {
+  height: 100%;
+}
+.slider {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+.item {
+  box-sizing: border-box;
+  height: 80%;
+  padding: 10px;
+}
+.imgBox {
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  height: 40%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+}
+.mainTitle {
+  margin-top: 200px;
+  color: makerBlue;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  max-width: 480px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.description {
+  font-size: 1rem;
+  max-width: 480px;
+  word-break: keep-all;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.listItem {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  border-radius: 999px;
+  font-size: 1rem;
+  background-color: sliderBg;
+}
+.nextArrow {
+  cursor: pointer;
+  bottom: 0px;
+  right: 0;
+  position: absolute;
+  z-index: 20;
+  border: 2px solid makerDarkGrey;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: makerWhite;
+  color: makerDarkGrey;
+}
+.prevArrow {
+  cursor: pointer;
+  bottom: 0px;
+  left: 0;
+  position: absolute;
+  border: 2px solid makerDarkGrey;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  z-index: 20;
+  border-radius: 4px;
+  background-color: makerWhite;
+  color: makerDarkGrey;
+}
+.arrowIcon {
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  color: makerDarkGrey;
+}
+@media screen and (max-width: sizeScreensSm) {
+  .mainTitle {
+    margin-top: 0;
+  }
+}

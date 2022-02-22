@@ -2,18 +2,37 @@ import React, { useState, useEffect } from 'react';
 import styles from './gd.module.css';
 import useScrollFadeIn from '../../../../components/useScrollFadeIn/useScrollFadeIn';
 import useScrollClipPath from '../../../../components/useScrollClipPath/useScrollClipPath';
-
+import SimpleSlider from './slider/slider';
 const GdPage = (props) => {
   const [inPage, setInPage] = useState(false);
+  const webImgList = [
+    '/images/projects/gd/gd_01.png',
+    '/images/projects/gd/gd_02.png',
+    '/images/projects/gd/gd_03.png',
+    '/images/projects/gd/gd_04.png',
+    '/images/projects/gd/gd_05.png',
+    '/images/projects/gd/gd_06.png',
+    '/images/projects/gd/gd_07.png',
+    '/images/projects/gd/gd_08.png',
+    '/images/projects/gd/gd_09.png',
+    '/images/projects/gd/gd_10.png',
+    '/images/projects/gd/gd_11.png',
+    '/images/projects/gd/gd_12.png',
+    '/images/projects/gd/gd_13.png',
+    '/images/projects/gd/gd_14.png',
+    '/images/projects/gd/gd_m01.png',
+    '/images/projects/gd/gd_m02.png',
+    '/images/projects/gd/gd_m03.png',
+    '/images/projects/gd/gd_m04.png',
+    '/images/projects/gd/gd_m05.png',
+    '/images/projects/gd/gd_menu.png',
+  ];
   useEffect(() => {
     setInPage(true);
     return () => {
       setInPage(false);
     };
   }, []);
-
-  const ClipLeftAnimatedItem = useScrollClipPath('left', 1, 0);
-  const fadeInAimatedItem = useScrollFadeIn('up', 0.5, 0);
 
   return (
     <>
@@ -27,7 +46,7 @@ const GdPage = (props) => {
         <section className={styles.mainBanner}>
           <h2 className={styles.mainTitle}>굿케어 홈페이지 리뉴얼 </h2>
         </section>
-        <section className={styles.section} {...fadeInAimatedItem}>
+        <section className={styles.section}>
           <ul className={styles.info}>
             <li className={styles.infoItem}>
               <h3 className={styles.itemTitle}>개발 기간</h3>
@@ -59,43 +78,54 @@ const GdPage = (props) => {
         </section>
         <section className={styles.section}>
           <div className={styles.contents}>
-            <div className={styles.imgBox} {...ClipLeftAnimatedItem}>
+            <div className={styles.imgBox}>
               <img src="/images/gd_sub_01.png" alt="" className={styles.img} />
             </div>
             <p className={`${styles.description} ${styles.flex50}`}>
               <b>굿케어 홈페이지 리뉴얼 작업을 진행했습니다.</b>
               <br /> <br />
-              홈페이지는 슬라이드, 맞춤 서비스, 강점, 공지, 영상, 리뷰 등의
-              섹션을 가진 메인페이지와 3개의 대분류 25개의 페이지로 이루어져
-              있습니다. <br />
+              <br />
               입사 당시 홈페이지는 4개의 개별적인 홈페이지가 연결되어 있는
               형태였습니다. 각각의 홈페이지는 역활과 메뉴가 달랐고 우측 상단의
               로고를 클릭하면 메인 홈페이지로 복귀되는 형태였습니다. 또한
               일러스트가 강조되어 회사의 수상, 활동, 업무, 세미나 등 다양한 현물
-              사진이 있음에도 노출되고 있지 않았습니다. <br /> 자사 프로그램은
-              꾸준히 수정 보완되고, 영업, 내부직원 교육이 지속적으로 진행되고
-              있었으나 내부적으로만 공유될 뿐 외부에 비추어지지 않았습니다.
+              사진이 있음에도 노출되고 있지 않았습니다. <br /> 비영리 회계,
+              세무, 컨설팅, 개발, 영상, 디자인 다양한 인력을 보유하고 있고,
+              직원들의 내부 교육이 꾸준히 진행되며 프로그램이 수정, 보완되는
+              내용과 다양한 수상, 활동, 업무, 세미나 사진을 추가해야한다고
+              생각했습니다. 또한 4개의 개별적인 홈페이지를 한 눈에 파악할 수
+              있도록 통합시켜야 한다고 생각되었습니다. 제가 홈페이지 리뉴얼을
+              진행해보겠다 요청하고 리뉴얼 기획서를 제작해 임원분들에게
+              제시했습니다.
             </p>
           </div>
         </section>
         <section className={styles.section}>
-          <p className={styles.description}>
-            <b>"굿케어의 강점을 추가해야 한다!"</b>
-            <br /> 비영리 회계, 세무, 컨설팅, 개발, 영상, 디자인 다양한 인력을
-            보유하고 있고, 직원들의 내부 교육이 꾸준히 진행되며 프로그램이 수정,
-            보완되는 내용과 다양한 수상, 활동, 업무, 세미나 사진을
-            추가해야한다고 생각했습니다.
-            <br />
-            또한 4개의 개별적인 홈페이지를 한 눈에 파악할 수 있도록 통합시켜야
-            한다고 생각되었고 리뉴얼 기획서를 제작해 임원분들에게 제시했습니다.
-          </p>
-          <p className={styles.description}>
-            하지만 다들 각자의 업무로 인해 시간을 뺄 수 없었습니다. 혼자
-            진행해보겠냐, 필요한 내용을 요청하라는 답변에 기획부터 혼자 먼저
-            진행하게 되었습니다. 먼저 경쟁사와 중견기업의 홈페이지를 레퍼런스로
-            기획했습니다. 홍보메일 업무와 매거진, 블로그, 유튜브 썸네일 작업,
-            타사 홈페이지 제작 등을 병행하며 진행했습니다.
-          </p>
+          <div className={styles.contents}>
+            <div className={` ${styles.flex50}`}>
+              <img
+                src="/images/projects/gd/gd_map.png"
+                alt=""
+                className={styles.img}
+              />
+              <p className={styles.description}>
+                먼저 혼자 진행하게 되었습니다. 기획부터 백엔드에게 전달하기
+                전까지 진행했습니다. 필요한 자료를 회계팀, 운영팀에게 요청하고
+                임원분들과 팀원분들의 의견을 조율하며 진행했습니다. 후반부에
+                디자이너와 백엔드분과 함께 마무리하게 되었습니다. 리뉴얼한
+                홈페이지는 슬라이드, 맞춤 서비스, 강점, 공지, 영상, 리뷰 등의
+                섹션을 가진 메인페이지와 3개의 대분류 25개의 페이지로 이루어져
+                있습니다.
+              </p>
+            </div>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/gd/gd_documents.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+          </div>
         </section>
         <section className={styles.section}>
           <ul className={styles.list}>
@@ -125,12 +155,10 @@ const GdPage = (props) => {
             진행했습니다. 프로젝트의 시작부터 끝까지 함께 진행하고, 바닐라
             자바스크립트에 욕심을 내서 진행해서 다시 보면 부족한 부분이
             많습니다. 네이버 부스트코스 웹 UI 개발, 엘리의 드림코딩 아카데미의
-            포트폴리오 웹사이트 클론코딩을 수강하고 제작했습니다. 감사합니다.
+            포트폴리오 웹사이트 클론코딩을 수강하고 제작했습니다.
           </p>
         </section>
-        <section className={styles.section}>
-          <p>next project 굿케어 솔루션 프로그램 보기</p>
-        </section>
+        <section className={styles.section}></section>
       </div>
     </>
   );

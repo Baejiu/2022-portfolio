@@ -52,15 +52,44 @@ const FsPage = (props) => {
           </ul>
         </section>
         <section className={styles.section}>
-          <p className={styles.description}>
-            "하고싶은거 있어. 품고만 있지 말고 한번 해보자" 디자이너 그룹
-            쓰리포크즈가 전하는 메세지입니다. 쓰리포크즈 홈페이지는 6개월의
-            국비지원 학원을 수료하고 얼마 되지 않은 상태에서 제작해서 단순한
-            형태로 하드코딩되어있습니다. 그럼에도 꾸준히 무료호스팅을 연장하고
-            있습니다. 홈페이지의 그림을 보고 있으면 하고싶은 것, 꿈을 잊지 않기
-            위한 다짐, 본업에도 충실하며 조금씩 자신을 위한 시간을 낼 수 있는
-            용기를 줍니다.
-          </p>
+          <div className={styles.contents}>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/fs/fs_01.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <p className={`${styles.description} ${styles.flex50}`}>
+              <b>"하고싶은거 있어. 품고만 있지 말고 한번 해보자"</b>
+              <br /> 디자이너 그룹 쓰리포크즈가 전하는 메세지입니다. 쓰리포크즈
+              홈페이지는 6개월의 국비지원 학원을 수료하고 얼마 되지 않은
+              상태에서 제작해서 단순한 형태로 하드코딩되어있습니다. 그럼에도
+              꾸준히 무료호스팅을 연장하고 있습니다. 홈페이지의 그림을 보고
+              있으면 하고싶은 것, 꿈을 잊지 않기 위한 다짐, 본업에도 충실하며
+              조금씩 자신을 위한 시간을 낼 수 있는 용기를 줍니다.
+            </p>
+          </div>
+        </section>
+        <section className={styles.section}>
+          <div className={styles.contents}>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/fs/fs_02.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/fs/fs_03.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+          </div>
+        </section>
+        <section className={styles.section}>
           <p className={styles.description}>
             개발공부를 하며 처음으로 디자이너분과 소통하며 제작했습니다.
             모바일로 디자인된 시안을 전해주셨는데 반응형으로 제작하며 혼자
@@ -80,9 +109,7 @@ const FsPage = (props) => {
             <li className={styles.listItem}>반응형</li>
           </ul>
         </section>
-        <section className={styles.section}>
-          <p>next project </p>
-        </section>
+        <section className={styles.section}></section>
       </div>
     </>
   );

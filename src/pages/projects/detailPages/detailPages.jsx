@@ -5,11 +5,13 @@ import GsPage from './gs/gs';
 import GdPage from './gd/gd';
 import RaPage from './ra/ra';
 import FsPage from './fs/fs';
+import styles from './detailPages.module.css';
 
-const DetailPages = () => {
+const DetailPages = ({ projectsService }) => {
   const sectionsRef = useRef(null);
   const [winScroll, setWinScroll] = useState(null);
   const [containerHeight, setContainerHeight] = useState(null);
+  const [item, setItem] = useState();
   const { id } = useParams();
 
   useEffect(() => {
@@ -33,6 +35,14 @@ const DetailPages = () => {
     setWinScroll(scrolled);
   };
 
+  useEffect(() => {
+    if (!projectsService) {
+      return;
+    }
+    setItem(projectsService.data.filter((item) => item.id === id)[0]);
+  }, [projectsService, id]);
+
+  console.log(item);
   return (
     <>
       <PageProgressBar
@@ -45,6 +55,15 @@ const DetailPages = () => {
         {id === 'fs' && <FsPage />}
         {id === 'ra' && <RaPage />}
       </div>
+      {item ? (
+        <a href={item.link} target="_blank" rel="noreferrer">
+          <button className={styles.btn}>
+            홈페이지
+            <br />
+            보러가기
+          </button>
+        </a>
+      ) : null}
     </>
   );
 };

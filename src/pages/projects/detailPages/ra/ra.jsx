@@ -54,19 +54,95 @@ const RaPage = (props) => {
           </ul>
         </section>
         <section className={styles.section}>
-          <p className={styles.description}>
-            간편하게 가입하고, 비대면 카톡으로 진행되는 회계 프로그램 홈페이지를
-            제작했습니다. 젊은 층의 가입을 유도하기 위해 저렴한 가격과 비대면
-            시스템을 요청했고, 웹사이트 기획과 디자인, 구현까지 진행했습니다.
-            문의게시판의 api와 콘솔창 이후의 데이터 불러오는 영역은 백엔드가
-            진행하고, 그 외 작업은 javascript로 진행했습니다.
-          </p>
+          <div className={styles.contents}>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/ra/ra_01.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <p className={`${styles.description} ${styles.flex50}`}>
+              간편하게 가입하고, 비대면 카톡으로 진행되는 회계 프로그램
+              홈페이지를 제작했습니다. 젊은 층의 가입을 유도하기 위해 저렴한
+              가격과 비대면 시스템을 요청했고, 웹사이트 기획과 디자인, 구현까지
+              진행했습니다. 문의게시판의 api와 콘솔창 이후의 데이터 불러오는
+              영역은 백엔드가 진행하고, 그 외 작업은 javascript로 진행했습니다.
+            </p>
+          </div>
           <p className={styles.description}>
             반응형으로 랜딩페이지를 제작했습니다. 애니메이션과 손 쉽게
             회원가입하고 신청 서류를 작성할 수 있도록 유저플로우를 설계했습니다.
             또한 콘솔창의 모바일은 앱 UI와 비슷하게 만듦으로써 손 쉽게 버튼을
             누르고 정보를 확인할 수 있도록 구현했습니다.
           </p>
+        </section>
+        <section className={styles.section}>
+          <div className={styles.contents}>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/ra/ra_02.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <div className={styles.imgBox}>
+              <img
+                src="/images/projects/ra/ra_03.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+          </div>
+        </section>
+        <section className={styles.section}>
+          <div className={styles.contents}>
+            <div className={styles.flex25}>
+              <img
+                src="/images/projects/ra/ra_07.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <div className={styles.flex25}>
+              <img
+                src="/images/projects/ra/ra_04.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <p className={`${styles.description} ${styles.flex50}`}>
+              간편하게 가입하고, 비대면 카톡으로 진행되는 회계 프로그램
+              홈페이지를 제작했습니다. 젊은 층의 가입을 유도하기 위해 저렴한
+              가격과 비대면 시스템을 요청했고, 웹사이트 기획과 디자인, 구현까지
+              진행했습니다. 문의게시판의 api와 콘솔창 이후의 데이터 불러오는
+              영역은 백엔드가 진행하고, 그 외 작업은 javascript로 진행했습니다.
+            </p>
+          </div>
+        </section>
+        <section className={styles.section}>
+          <div className={styles.contents}>
+            <div className={styles.flex25}>
+              <img
+                src="/images/projects/ra/ra_05.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <div className={styles.flex25}>
+              <img
+                src="/images/projects/ra/ra_06.png"
+                alt=""
+                className={styles.img}
+              />
+            </div>
+            <p className={`${styles.description} ${styles.flex50}`}>
+              반응형으로 랜딩페이지를 제작했습니다. 애니메이션과 손 쉽게
+              회원가입하고 신청 서류를 작성할 수 있도록 유저플로우를
+              설계했습니다. 또한 콘솔창의 모바일은 앱 UI와 비슷하게 만듦으로써
+              손 쉽게 버튼을 누르고 정보를 확인할 수 있도록 구현했습니다.
+            </p>
+          </div>
         </section>
         <section className={styles.section}>
           <ul className={styles.list}>
@@ -80,9 +156,6 @@ const RaPage = (props) => {
         </section>
         <section className={styles.section}>
           <p className={styles.description}></p>
-        </section>
-        <section className={styles.section}>
-          <p>next project </p>
         </section>
       </div>
     </>
