@@ -40,36 +40,35 @@ const ProjectItem = ({ winInnerHeight, scrollIndex, item, flex }) => {
   // }, [scrollIndex]);
   return (
     <li ref={itemRef} className={styles.container}>
-      <Link to={item.url}>
-        <div
-          className={
-            flex === 'row'
-              ? `${styles.item} ${styles.row}`
-              : `${styles.item} ${styles.rowReverse}`
-          }
-        >
-          <div className={styles.banner} {...useScrollClipPath('down', 1, 0)}>
-            <img
-              src={item.bannerUrl}
-              alt={`${item.title} 배너이미지`}
-              className={styles.img}
-            />
+      <div
+        className={
+          flex === 'row'
+            ? `${styles.item} ${styles.row}`
+            : `${styles.item} ${styles.rowReverse}`
+        }
+      >
+        <div className={styles.banner} {...useScrollClipPath('down', 1, 0)}>
+          <img
+            src={item.bannerUrl}
+            alt={`${item.title} 배너이미지`}
+            className={styles.img}
+          />
+        </div>
+        <div className={styles.contents} {...useScrollClipPath('down', 1, 0)}>
+          <div className={styles.textBox}>
+            <h3 className={styles.title}>{item.title}</h3>
+            <p className={styles.subtitle}>{item.subtitle}</p>
+            <ul className={styles.tags}>
+              {item.tag.map((item, index) => {
+                return (
+                  <li key={index} className={styles.tag}>
+                    #{item}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-          <div className={styles.contents} {...useScrollClipPath('down', 1, 0)}>
-            <div className={styles.textBox}>
-              <h3 className={styles.title}>{item.title}</h3>
-              <p className={styles.subtitle}>{item.subtitle}</p>
-              <ul className={styles.tags}>
-                {item.tag.map((item, index) => {
-                  return (
-                    <li key={index} className={styles.tag}>
-                      #{item}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-            {/* <ul className={styles.itembtns}>
+          {/* <ul className={styles.itembtns}>
             <li className={styles.itemBtn}>
               <button>git</button>
             </li>
@@ -80,12 +79,12 @@ const ProjectItem = ({ winInnerHeight, scrollIndex, item, flex }) => {
               <button>home Page</button>
             </li>
           </ul> */}
-            <div>
-              <button className={styles.link}>go</button>
-            </div>
-          </div>
+
+          <Link to={item.url}>
+            <button className={styles.link}>go</button>
+          </Link>
         </div>
-      </Link>
+      </div>
     </li>
   );
 };
