@@ -7,7 +7,6 @@
   display: flex;
   width: 100%;
   transition: all 250ms ease-in;
-  cursor: pointer;
 }
 
 .item.rowReverse {

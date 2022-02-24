@@ -95,6 +95,9 @@
 }
 
 @media screen and (max-width: sizeScreensMd) {
+  .mainBanner {
+    background-size: auto 100%;
+  }
   .info {
     flex-direction: column;
   }

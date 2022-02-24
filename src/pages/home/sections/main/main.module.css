@@ -7,8 +7,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  padding: 120px 0;
+  opacity: 0;
+  transform: translate(0, 25px);
+  transition: opacity 250ms ease-out, transform 300ms ease;
 }
-
+.openContainer {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: opacity 250ms ease-out, transform 300ms ease;
+}
 .visualBox {
   position: relative;
   display: flex;
@@ -52,6 +61,9 @@
   height: 40px;
 }
 @media screen and (max-width: sizeScreensMd) {
+  .container {
+    padding: 40px 0;
+  }
   .visualBox {
     position: static;
     height: 90vh;

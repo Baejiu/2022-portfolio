@@ -4,6 +4,7 @@ import UpDownText from 'components/upDownText/upDownText';
 import RollingText from 'components/rollingText/rollingText';
 
 const Main = ({ scrollIndex, winScroll }) => {
+  const [inPage, setInpage] = useState(false);
   const imgRef = useRef(null);
   const list = [
     ['BAEJIU', 'Portfolio'],
@@ -12,10 +13,21 @@ const Main = ({ scrollIndex, winScroll }) => {
     ['안녕하세요', '배지우입니다'],
   ];
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    setInpage(true);
+    return () => {
+      setInpage(false);
+    };
+  }, []);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={
+        inPage
+          ? `${styles.container} ${styles.openContainer}`
+          : styles.container
+      }
+    >
       <div className={styles.visualBox}>
         <div className={styles.textBox}>
           <UpDownText list={list} scrollIndex={scrollIndex} />

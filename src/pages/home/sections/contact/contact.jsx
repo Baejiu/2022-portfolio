@@ -52,7 +52,6 @@ const Contact = () => {
                   방문하기
                 </a>
               </li>
-              <li>Raact</li>
             </ul>
             <span className={styles.itemContent}></span>
           </li>

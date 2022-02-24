@@ -45,8 +45,26 @@ const Home = ({ blogService, projectsService }) => {
     };
   }, []);
 
+  function optimizeAnimation(callback) {
+    let ticking = false;
+
+    return () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          callback();
+          ticking = false;
+        });
+      }
+    };
+  }
+
   useEffect(() => {
     if (!sectionsRef.current) return;
+    // window.addEventListener('scroll', optimizeAnimation(yScrollEvent), {
+    //   passive: true,
+    // });
+
     window.addEventListener('scroll', yScrollEvent);
     return () => {
       window.removeEventListener('scroll', yScrollEvent);
@@ -89,14 +107,14 @@ const Home = ({ blogService, projectsService }) => {
         ref={sectionsRef}
       >
         <section
-          className={styles.section}
+          className={`${styles.section} ${styles.mainSection}`}
           id="main"
           ref={(el) => (sectionRef.current[0] = el)}
         >
           <Main scrollIndex={scrollIndex} winScroll={winScroll} />
         </section>
         <section
-          className={`${styles.section} ${styles.section2}`}
+          className={styles.section}
           id="about"
           ref={(el) => (sectionRef.current[1] = el)}
         >
@@ -114,7 +132,7 @@ const Home = ({ blogService, projectsService }) => {
           />
         </section>
         <section
-          className={`${styles.section} ${styles.section2}`}
+          className={styles.section}
           id="blog"
           ref={(el) => (sectionRef.current[3] = el)}
         >
