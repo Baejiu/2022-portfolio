@@ -1,11 +1,13 @@
+import { useCallback } from 'react';
 import { useEffect, useState } from 'react';
 import styles from './homeDots.module.css';
 
 const Dot = ({ num, scrollIndex, duration, sectionName, onControlsClick }) => {
   const [bgColor, setBgColor] = useState(null);
+  const [activeNum, setActiveNum] = useState(null);
   const [borderColor, setBorderColor] = useState(null);
 
-  useEffect(() => {
+  const changeDotColor = useCallback(() => {
     if (scrollIndex > num) {
       setBgColor('#4CAF50');
       setBorderColor('#4CAF50');
@@ -16,7 +18,14 @@ const Dot = ({ num, scrollIndex, duration, sectionName, onControlsClick }) => {
       setBgColor('white');
       setBorderColor('white');
     }
-  }, [scrollIndex]);
+  });
+  useEffect(() => {
+    if (!scrollIndex) {
+      return;
+    }
+    activeNum !== scrollIndex && setActiveNum(scrollIndex);
+    changeDotColor();
+  }, [changeDotColor, scrollIndex, activeNum]);
 
   return (
     <div
