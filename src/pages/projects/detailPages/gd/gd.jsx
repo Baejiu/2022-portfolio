@@ -49,7 +49,7 @@ const GdPage = (props) => {
         <section className={styles.section}>
           <ul className={styles.info}>
             <li className={styles.infoItem}>
-              <h3 className={styles.itemTitle}>개발 기간</h3>
+              <h3 className={styles.itemTitle}>사용 기술</h3>
               <span className={styles.itemContent}>2020.04 - 2020.12</span>
             </li>
             <li className={styles.infoItem}>
@@ -109,13 +109,13 @@ const GdPage = (props) => {
                 className={styles.img}
               />
               <p className={styles.description}>
-                먼저 혼자 진행하게 되었습니다. 기획부터 백엔드에게 전달하기
-                전까지 진행했습니다. 필요한 자료를 회계팀, 운영팀에게 요청하고
-                임원분들과 팀원분들의 의견을 조율하며 진행했습니다. 후반부에
-                디자이너와 백엔드분과 함께 마무리하게 되었습니다. 리뉴얼한
-                홈페이지는 슬라이드, 맞춤 서비스, 강점, 공지, 영상, 리뷰 등의
-                섹션을 가진 메인페이지와 3개의 대분류 25개의 페이지로 이루어져
-                있습니다.
+                기획부터 백엔드에게 전달하기 전까지 총괄을 맡아 진행했습니다.
+                필요한 자료를 회계팀, 운영팀에게 요청하고 임원분들과 팀원분들의
+                의견을 조율했습니다. 후반부에 디자이너와 백엔드분과 함께
+                서버와의 연동, 디테일한 디자인 수정을 하고 마무리하게
+                되었습니다. 리뉴얼한 홈페이지는 슬라이드, 맞춤 서비스, 강점,
+                공지, 영상, 리뷰 등의 섹션을 가진 메인페이지와 3개의 대분류
+                25개의 페이지로 이루어져 있습니다.
               </p>
             </div>
             <div className={styles.imgBox}>

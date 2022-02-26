@@ -8,7 +8,7 @@
 .title {
   font-size: 8rem;
   display: block;
-  line-height: 5.5rem;
+  line-height: 6.6rem;
   color: #fff;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
@@ -22,7 +22,7 @@
 
 @media screen and (max-width: sizeScreensMd) {
   .title {
-    font-size: 18vw;
-    line-height: 12vw;
+    font-size: 16vw;
+    line-height: 13vw;
   }
 }

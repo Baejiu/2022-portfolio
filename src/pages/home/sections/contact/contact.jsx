@@ -37,8 +37,21 @@ const Contact = () => {
             </span>
           </li>
           <li className={styles.infoItem}>
+            <h3 className={styles.itemTitle}>이력서</h3>
+            <span className={styles.itemContent}>
+              <a
+                href="
+                https://classic-script-a3e.notion.site/d3fadbcbb57f40c9be4788963f831a28"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.orangeColor}
+              >
+                Notion 이력서
+              </a>
+            </span>
+          </li>
+          <li className={styles.infoItem}>
             <h3 className={styles.itemTitle}>KaKao</h3>
-
             <ul className={styles.itemContent}>
               <li>아이디: jiumaker</li>
               <li>
@@ -60,7 +73,7 @@ const Contact = () => {
             <ul className={styles.itemContent}>
               <li>Javascript</li>
               <li>반응형</li>
-              <li>Raact</li>
+              <li>React</li>
             </ul>
           </li>
         </ul>
