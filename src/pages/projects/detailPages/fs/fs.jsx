@@ -38,7 +38,7 @@ const FsPage = (props) => {
             <li className={styles.infoItem}>
               <h3 className={styles.itemTitle}>팀</h3>
               <ul className={styles.itemContent}>
-                <li>desiner</li>
+                <li>designer</li>
                 <li>front-end</li>
               </ul>
             </li>
