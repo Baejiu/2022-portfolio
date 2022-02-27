@@ -42,7 +42,7 @@ const GsPage = (props) => {
               <ul className={styles.itemContent}>
                 <li> back-end * 2</li>
                 <li>front-end</li>
-                <li>desiner </li>
+                <li>designer </li>
                 <li>app-developer </li>
               </ul>
             </li>
