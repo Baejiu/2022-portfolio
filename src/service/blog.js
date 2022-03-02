@@ -2,6 +2,13 @@ export default class ProiectsService {
   constructor() {
     this.data = [
       {
+        category: 'Study-Note/프로그래머스',
+        title: 'Lv.2 - 기능개발 (스택/큐)',
+        url: 'https://ji-u.tistory.com/41',
+        img: '/images/blog/41.png',
+        date: '2022. 3. 2. 23:34',
+      },
+      {
         category: 'Study-Note/JavaScript',
         title: '20. 객체와 배열의 부족함을 채워주는 Map과 Set',
         url: 'https://ji-u.tistory.com/40',
