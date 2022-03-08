@@ -23,6 +23,20 @@ const Contact = () => {
             </span>
           </li>
           <li className={styles.infoItem}>
+            <h3 className={styles.itemTitle}>Github</h3>
+            <span className={styles.itemContent}>
+              <a
+                href="
+                https://github.com/Baejiu"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.orangeColor}
+              >
+                https://github.com/Baejiu
+              </a>
+            </span>
+          </li>
+          <li className={styles.infoItem}>
             <h3 className={styles.itemTitle}>Blog</h3>
             <span className={styles.itemContent}>
               <a
