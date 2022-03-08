@@ -79,7 +79,11 @@ const GdPage = (props) => {
         <section className={styles.section}>
           <div className={styles.contents}>
             <div className={styles.imgBox}>
-              <img src="/images/gd_sub_01.png" alt="" className={styles.img} />
+              <img
+                src={`${process.env.REACT_APP_BASE_URL}images/gd_sub_01.png`}
+                alt=""
+                className={styles.img}
+              />
             </div>
             <p className={`${styles.description} ${styles.flex50}`}>
               <b>굿케어 홈페이지 리뉴얼 작업을 진행했습니다.</b>
@@ -104,7 +108,7 @@ const GdPage = (props) => {
           <div className={styles.contents}>
             <div className={` ${styles.flex50}`}>
               <img
-                src="/images/projects/gd/gd_map.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/gd/gd_map.png`}
                 alt=""
                 className={styles.img}
               />
@@ -120,7 +124,7 @@ const GdPage = (props) => {
             </div>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/gd/gd_documents.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/gd/gd_documents.png`}
                 alt=""
                 className={styles.img}
               />

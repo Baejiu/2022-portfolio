@@ -76,7 +76,7 @@ const GsPage = (props) => {
           <div className={styles.contents}>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/gs/gs_01.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/gs/gs_01.png`}
                 alt=""
                 className={styles.img}
               />
@@ -96,14 +96,14 @@ const GsPage = (props) => {
           <div className={styles.contents}>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/gs/gs_02.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/gs/gs_02.png`}
                 alt=""
                 className={styles.img}
               />
             </div>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/gs/gs_03.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/gs/gs_03.png`}
                 alt=""
                 className={styles.img}
               />
@@ -114,7 +114,7 @@ const GsPage = (props) => {
           <div className={styles.contents}>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/gs/gs_06.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/gs/gs_06.png`}
                 alt=""
                 className={styles.img}
               />
@@ -133,7 +133,7 @@ const GsPage = (props) => {
           <div className={styles.contents}>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/gs/gs_05.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/gs/gs_05.png`}
                 alt=""
                 className={styles.img}
               />
@@ -177,14 +177,14 @@ const GsPage = (props) => {
           <div className={styles.contents}>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/gs/gs_04.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/gs/gs_04.png`}
                 alt=""
                 className={styles.img}
               />
             </div>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/gs/gs_07.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/gs/gs_07.png`}
                 alt=""
                 className={styles.img}
               />

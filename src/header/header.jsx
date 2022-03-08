@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./header.module.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './header.module.css';
 const Header = ({}) => {
   return (
     <div className={styles.container}>
@@ -9,7 +9,7 @@ const Header = ({}) => {
           <li className={styles.home}>
             <Link to="/">
               <img
-                src="images/favicon.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/favicon.png`}
                 alt="홈으로 이동"
                 className={styles.logo}
               />

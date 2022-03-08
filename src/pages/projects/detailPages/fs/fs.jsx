@@ -55,7 +55,7 @@ const FsPage = (props) => {
           <div className={styles.contents}>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/fs/fs_01.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/fs/fs_01.png`}
                 alt=""
                 className={styles.img}
               />
@@ -75,14 +75,14 @@ const FsPage = (props) => {
           <div className={styles.contents}>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/fs/fs_02.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/fs/fs_02.png`}
                 alt=""
                 className={styles.img}
               />
             </div>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/fs/fs_03.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/fs/fs_03.png`}
                 alt=""
                 className={styles.img}
               />

@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "https://baejiu.github.io/2022-portfolio/",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^1.0.5",
@@ -23,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "scp -r /Users/baejiu/domains/baejiu.com/2022/client/build/* "
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

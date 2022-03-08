@@ -11,7 +11,7 @@ const About = () => {
       <div className={styles.contents}>
         <div className={styles.profile}>
           <img
-            src="images/profile.jpg"
+            src={`${process.env.REACT_APP_BASE_URL}images/profile.jpg`}
             alt="프로필사진"
             className={styles.img}
             {...useScrollClipPath('left', 1, 0)}

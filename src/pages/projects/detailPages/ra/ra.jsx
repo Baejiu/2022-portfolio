@@ -57,7 +57,7 @@ const RaPage = (props) => {
           <div className={styles.contents}>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/ra/ra_01.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/ra/ra_01.png`}
                 alt=""
                 className={styles.img}
               />
@@ -81,14 +81,14 @@ const RaPage = (props) => {
           <div className={styles.contents}>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/ra/ra_02.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/ra/ra_02.png`}
                 alt=""
                 className={styles.img}
               />
             </div>
             <div className={styles.imgBox}>
               <img
-                src="/images/projects/ra/ra_03.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/ra/ra_03.png`}
                 alt=""
                 className={styles.img}
               />
@@ -99,14 +99,14 @@ const RaPage = (props) => {
           <div className={styles.contents}>
             <div className={styles.flex25}>
               <img
-                src="/images/projects/ra/ra_07.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/ra/ra_07.png`}
                 alt=""
                 className={styles.img}
               />
             </div>
             <div className={styles.flex25}>
               <img
-                src="/images/projects/ra/ra_04.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/ra/ra_04.png`}
                 alt=""
                 className={styles.img}
               />
@@ -124,14 +124,14 @@ const RaPage = (props) => {
           <div className={styles.contents}>
             <div className={styles.flex25}>
               <img
-                src="/images/projects/ra/ra_05.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/ra/ra_05.png`}
                 alt=""
                 className={styles.img}
               />
             </div>
             <div className={styles.flex25}>
               <img
-                src="/images/projects/ra/ra_06.png"
+                src={`${process.env.REACT_APP_BASE_URL}images/projects/ra/ra_06.png`}
                 alt=""
                 className={styles.img}
               />
